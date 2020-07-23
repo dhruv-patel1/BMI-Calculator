@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/weight_label"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="140dp"
+        android:gravity="center"
+        android:text="Weight"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/height_label"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="Height"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weight_label" />
+
+    <TextView
+        android:id="@+id/bmi_label"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="BMI"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/height_label" />
+
+    <Button
+        android:id="@+id/bmiButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="90dp"
+        android:background="#009688"
+        android:text="Calculate BMI"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioButtons" />
+
+    <Button
+        android:id="@+id/adviceButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:onClick="giveAdvice"
+        android:background="#009688"
+        android:text="Advice"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bmiButton" />
+
+    <EditText
+        android:id="@+id/weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="140dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Enter weight"
+        android:inputType="numberDecimal"
+        android:textColor="#009688"
+        android:textColorHighlight="#009688"
+        android:textColorHint="#009688"
+        android:textColorLink="#009688"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="35dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Enter height"
+        android:inputType="numberDecimal"
+        android:textColor="#009688"
+        android:textColorHighlight="#009688"
+        android:textColorHint="#009688"
+        android:textColorLink="#009688"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weight" />
+
+    <TextView
+        android:id="@+id/bmiCalculation"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="35dp"
+        android:background="#C3BEBE"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textColorHighlight="#009688"
+        android:textColorHint="#009688"
+        android:textColorLink="#009688"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/height" />
+
+    <RadioGroup
+        android:id="@+id/radioButtons"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bmi_label">
+        
+        <RadioButton
+            android:id="@+id/english"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="English System"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textColorHighlight="#009688"
+            android:textColorHint="#009688"
+            android:textColorLink="#009688"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            />
+    <RadioButton
+        android:id="@+id/metric"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Metric System"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textColorHighlight="#009688"
+        android:textColorHint="#009688"
+        android:textColorLink="#009688"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        />
+
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/weight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.571"
+        app:srcCompat="@drawable/bmi_pic" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
